@@ -1,5 +1,4 @@
-1. TwoSum
-====
+# 1. TwoSum
 
 ## js
 
