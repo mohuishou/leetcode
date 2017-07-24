@@ -3,19 +3,19 @@
 ## js
 
 ```javascript
-function twoSum(nums,target){
+var twoSum = function(nums, target) {
     let o={}
     for(let i=0;i<nums.length;i++){
         o[nums[i]]=i
     }
-    for(let x in o){
-        let tmp = target - x
-        if (tmp in o){
-            return o[x] > o[tmp] ? [o[tmp],o[x]] : [o[x],o[tmp]]
+    for(let i=0;i<nums.length;i++){
+        let tmp = target - nums[i]
+        if (tmp in o && o[tmp] != i){
+            return i > o[tmp] ? [o[tmp],i] : [i,o[tmp]]
         }
     }
     return false
-}
+};
 ```
 
 ## go
